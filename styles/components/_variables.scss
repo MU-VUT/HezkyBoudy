@@ -1,0 +1,30 @@
+@use "sass:map";
+
+// Color variables
+
+$primaryColor: rgb(139, 98, 32);
+$primaryColorDark: rgb(75, 53, 17);
+$secondaryColor: rgb(190, 238, 98);
+$secondaryColorDark: rgb(160, 230, 26);
+$backColor: rgb(250, 250, 224);
+
+// Font variables
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Nunito&display=swap");
+
+$fontPrimary: "Archivo Narrow", sans-serif;
+$fontSecondary: "Nunito", sans-serif;
+
+// Media querries
+$breakpoints: (
+  small: 576px,
+  medium: 768px,
+  large: 1200px,
+);
+
+@mixin mq($key) {
+  $size: map.get($breakpoints, $key);
+
+  @media (min-width: $size) {
+    @content;
+  }
+}

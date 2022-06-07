@@ -1,0 +1,41 @@
+@use "variables";
+
+/* Hero Image*/
+.hero-pattern {
+  height: 15em;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/*Background Image */
+.hero-pattern:before {
+  content: "";
+  background: url("/HezkyBoudy%20-%20web/dev/res/icons/pattern.svg") repeat;
+  position: absolute;
+  width: 100%;
+  height: 15em;
+  z-index: -1;
+}
+
+.hero-pattern-inner {
+  position: relative;
+  height: 100%;
+}
+
+.hero-pattern-text {
+  position: absolute;
+  overflow: hidden;
+  background-color: variables.$backColor;
+  top: 2.5em;
+  margin-left: 5vw;
+  color: variables.$primaryColorDark;
+  border: 1px solid rgba(variables.$primaryColor, 0.5);
+
+  h1 {
+    font-size: 4em;
+    letter-spacing: 0.1em;
+    font-family: variables.$fontPrimary;
+    font-weight: 800;
+    margin: 0.05em 0.4em;
+    text-transform: uppercase;
+  }
+}

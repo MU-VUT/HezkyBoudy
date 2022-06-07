@@ -1,0 +1,30 @@
+@use "variables";
+
+.btn {
+  background-color: variables.$backColor;
+  appearance: button;
+  font-size: 1.25em;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  color: variables.$primaryColorDark;
+  margin: 0.1em 0.8em;
+  padding: 0.1em 0.8em;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+  text-decoration: none;
+  transition: 0.3s;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-family: variables.$fontPrimary;
+
+  &:active,
+  &:hover {
+    background-color: rgba(variables.$primaryColor, 0.9);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    color: variables.$backColor;
+  }
+  &-outline {
+    border: 2px solid rgba(variables.$primaryColor, 0.9);
+  }
+}

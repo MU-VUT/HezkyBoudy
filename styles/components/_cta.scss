@@ -1,0 +1,70 @@
+@use "variables";
+
+$ctaHeight: 480px;
+
+.cta-holder {
+  width: auto;
+  height: $ctaHeight;
+  background-color: rgba(0, 0, 0, 0.4);
+  &::before {
+    content: "";
+    background: url("/HezkyBoudy%20-%20web/dev/res/img/hero-frame.jpg")
+      no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: $ctaHeight;
+    z-index: -1;
+  }
+  h2 {
+    text-align: center;
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    font-family: variables.$fontPrimary;
+    font-weight: 600;
+    color: variables.$backColor;
+    text-transform: uppercase;
+    padding-top: calc($ctaHeight * 0.3);
+  }
+  .cta-subtitle {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: variables.$fontPrimary;
+    color: variables.$backColor;
+    letter-spacing: 0.05em;
+    padding-bottom: 1em;
+  }
+  .cta-button {
+  }
+}
+
+.cta-contact {
+  position: relative;
+  .text {
+    position: absolute;
+    bottom: calc($ctaHeight * 0.175);
+    left: calc(100vw * 0.1);
+  }
+  h2 {
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    font-family: variables.$fontPrimary;
+    font-weight: 600;
+    color: variables.$backColor;
+    text-transform: uppercase;
+    padding-top: calc($ctaHeight * 0.3);
+    text-align: left;
+  }
+  .cta-subtitle {
+    font-size: 1.5em;
+    font-family: variables.$fontPrimary;
+    color: variables.$backColor;
+    letter-spacing: 0.05em;
+    padding-bottom: 0;
+    text-align: left;
+  }
+  .cta-button {
+    position: absolute;
+    right: calc(100vw * 0.1);
+    bottom: calc($ctaHeight * 0.175);
+  }
+}

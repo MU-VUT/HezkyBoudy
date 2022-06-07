@@ -1,0 +1,104 @@
+@use "components/footer";
+@use "components/navbar";
+@use "components/variables";
+@use "components/header";
+@use "components/flex";
+@use "components/herobox";
+@use "components/button";
+@use "components/refbox";
+@use "components/offer";
+@use "components/cta";
+@use "components/highlights";
+@use "components/heropattern";
+@use "components/gallery";
+@use "components/contact";
+@use "components/form";
+@use "components/feature";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
+.holder {
+  max-width: 1920px;
+  margin: auto;
+  &-sm {
+    width: 90vw;
+    margin: 5em auto;
+  }
+}
+
+.hr-small {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid variables.$backColor;
+  margin: 0.2em 0;
+  padding: 0;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-top {
+  align-items: unset;
+}
+
+.no-border {
+  border: 0;
+}
+
+// Filler
+.symbol-vertical {
+  content: "";
+  background: url("/HezkyBoudy%20-%20web/dev/res/icons/filler-full.svg")
+    no-repeat;
+  z-index: -1;
+  background-size: 12em;
+  background-position: center;
+}
+
+//Anotation
+.anotation {
+  border-top: 1px solid variables.$primaryColorDark;
+  border-bottom: 1px solid variables.$primaryColorDark;
+  h1 {
+    padding: 2.5em;
+    font-size: 3em;
+    font-family: variables.$fontPrimary;
+    letter-spacing: 0.015em;
+    font-style: italic;
+    &::before {
+      content: " „ ";
+    }
+    &::after {
+      content: " ” ";
+    }
+  }
+}
+
+//margins
+.mt2 {
+  margin-top: 2em;
+}
+.mt5 {
+  margin-top: 5em;
+}
+.mb5 {
+  margin-bottom: 5em;
+}

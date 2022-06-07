@@ -1,0 +1,74 @@
+@use "variables";
+
+.hero-box {
+  width: 22.5em;
+  height: auto;
+  margin: 2.5em 0;
+  padding: 2.5em;
+  border: 1px solid variables.$primaryColor;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  .header {
+    font-family: variables.$fontPrimary;
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+  }
+
+  img {
+    height: 160px;
+    width: auto;
+  }
+
+  h1 {
+    font-size: 2em;
+    letter-spacing: 0.05em;
+  }
+
+  h2 {
+    letter-spacing: 0.075em;
+    font-size: 0.9em;
+  }
+
+  .hero-box-text {
+    margin-top: 1.5em;
+    text-align: justify;
+    font-family: variables.$fontSecondary;
+    .btn {
+      margin-top: 1em;
+    }
+  }
+}
+
+.hero-box-big {
+  width: 50%;
+  height: auto;
+  margin: 5em auto;
+  padding: 5em;
+  max-width: 1920px;
+  display: flex;
+  .hero-box-image {
+    width: 100%;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .header {
+    display: block;
+    margin-left: 2em;
+    h2 {
+      font-size: 1.4em;
+    }
+  }
+  .hero-box-heading {
+    text-align: left;
+  }
+  .hero-box-text {
+    margin-left: 2em;
+    p {
+      margin: 0.5em 0;
+      font-size: 1.2em;
+    }
+  }
+}

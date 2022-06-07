@@ -1,0 +1,70 @@
+@use "variables";
+
+.feature {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  padding: 5em;
+  max-width: 1920px;
+  display: flex;
+  font-family: variables.$fontPrimary;
+  justify-content: space-between;
+
+  &-inner {
+    display: block;
+    max-width: 50%;
+  }
+
+  h1 {
+    font-size: 2em;
+    letter-spacing: 0.05em;
+  }
+
+  &-text {
+    font-size: 1.2em;
+    margin: 1em 3em 1em 0;
+    font-family: variables.$fontSecondary;
+
+    p {
+      margin: 0.75em 0;
+    }
+  }
+  &-button {
+    margin-top: 3em;
+  }
+
+  &-image {
+    border-radius: 0.25em;
+    position: relative;
+    width: 540px;
+    height: auto;
+    background-image: url("file:///C:/Users/Red%20Devil/Desktop/WEBY/HezkyBoudy%20-%20weby/dev/res/img/hero-frame.jpg");
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -30px;
+      left: -30px;
+      width: 60px;
+      height: 75px;
+      background: url("file:///C:/Users/Red%20Devil/Desktop/WEBY/HezkyBoudy%20-%20weby/dev/res/icons/bullet-dark.svg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      z-index: -10;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -35px;
+      right: -30px;
+      width: 60px;
+      height: 75px;
+      background: url("file:///C:/Users/Red%20Devil/Desktop/WEBY/HezkyBoudy%20-%20weby/dev/res/icons/bullet-dark.svg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      z-index: -10;
+    }
+  }
+}

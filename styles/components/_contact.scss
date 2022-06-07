@@ -1,0 +1,44 @@
+@use "variables";
+
+.contact-box {
+  width: 90%;
+  height: auto;
+  margin: 2.5em 0;
+  margin-bottom: 5em;
+  padding: 2.5em;
+
+  .image {
+    width: 120px;
+    height: auto;
+    margin: auto;
+  }
+  .text {
+    padding: 0 1em;
+  }
+  p {
+    margin-top: 2em;
+  }
+  h2 {
+    font-family: variables.$fontPrimary;
+    text-transform: uppercase;
+    font-size: 1.75em;
+    letter-spacing: 0.05em;
+  }
+  ul {
+    font-family: variables.$fontSecondary;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    list-style: url("/HezkyBoudy%20-%20web/dev/res/icons/bullet-dark.svg");
+    list-style-position: inside;
+  }
+  li {
+    font-size: 1.2em;
+    margin-top: 0.7em;
+  }
+}
+
+//Mapa
+.map {
+  width: 100vw;
+  height: 25em;
+}

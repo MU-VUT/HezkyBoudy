@@ -1,0 +1,65 @@
+@use "variables";
+
+.highlights-heading {
+  font-family: variables.$fontPrimary;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.75em;
+  border-top: 1px solid rgba(variables.$primaryColor, 0.5);
+  padding-top: 3em;
+  letter-spacing: 0.05em;
+}
+
+.highlights-box {
+  width: 25em;
+  height: auto;
+  margin: 2.5em 0;
+  margin-bottom: 5em;
+  padding: 2.5em;
+  border: 1px solid variables.$primaryColor;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  .image {
+    width: 120px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 2em;
+  }
+  .text {
+    padding: 0 1em;
+  }
+  h2 {
+    font-family: variables.$fontPrimary;
+    text-transform: uppercase;
+    font-size: 1.75em;
+    letter-spacing: 0.05em;
+  }
+  ul {
+    font-family: variables.$fontSecondary;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    list-style: url("/HezkyBoudy%20-%20web/dev/res/icons/bullet-dark.svg");
+    list-style-position: inside;
+    line-height: 1.7em;
+  }
+  li {
+    font-size: 1.2em;
+    margin-top: 0.7em;
+  }
+}
+
+.service {
+  border: none;
+  box-shadow: none;
+  p {
+    margin-top: 2em;
+  }
+  li {
+    font-size: 1.5em;
+    line-height: 1.7em;
+  }
+}
+
+.svg-dark {
+  filter: invert(17%) sepia(7%) saturate(7035%) hue-rotate(5deg) brightness(95%)
+    contrast(87%);
+}

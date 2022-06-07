@@ -1,0 +1,26 @@
+@use "variables";
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@include variables.mq(small) {
+  @for $i from 1 through 12 {
+    .col-#{$i} {
+      flex: 0 0 calc(100% / (12 / $i));
+    }
+  }
+}
+
+.col-border {
+  border-bottom: 1px solid variables.$primaryColor;
+  border-left: 1px solid variables.$primaryColor;
+  margin-left: -1px;
+  &:last-of-type {
+    border-right: 1px solid variables.$primaryColor;
+    margin-right: -1px;
+  }
+}
+
+//&:not(:first-of-type)

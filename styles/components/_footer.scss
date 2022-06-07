@@ -1,0 +1,12 @@
+@use "variables";
+
+footer {
+  margin-top: auto;
+  min-height: 1.5em;
+  text-align: center;
+  vertical-align: bottom;
+  background-color: variables.$primaryColorDark;
+  color: white;
+  padding: 0.5em;
+  font-family: variables.$fontSecondary;
+}
