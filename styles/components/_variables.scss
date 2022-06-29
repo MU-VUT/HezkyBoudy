@@ -28,3 +28,7 @@ $breakpoints: (
     @content;
   }
 }
+
+.pswp__counter {
+  font-family: $fontSecondary;
+}

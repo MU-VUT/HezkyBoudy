@@ -15,7 +15,9 @@
     height: auto;
   }
   img {
+    height: 300px;
     width: 100%;
+    object-fit: cover;
   }
   h2 {
     font-family: variables.$fontPrimary;
@@ -24,5 +26,26 @@
     font-size: 1.75em;
     letter-spacing: 0.05em;
     margin-top: 1em;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px 10px;
+    &-wide {
+      grid-column: auto / span 2;
+    }
+    a {
+      height: 300px;
+      text-align: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+
+      &:active,
+      &:hover {
+        box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.6);
+      }
+    }
   }
 }
