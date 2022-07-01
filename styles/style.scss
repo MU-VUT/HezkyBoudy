@@ -14,6 +14,7 @@
 @use "components/contact";
 @use "components/form";
 @use "components/feature";
+@use "components/filler";
 
 * {
   margin: 0;
@@ -61,16 +62,6 @@ body {
 
 .no-border {
   border: 0;
-}
-
-// Filler
-.symbol-vertical {
-  content: "";
-  background: url("/HezkyBoudy%20-%20web/dev/res/icons/filler-full.svg")
-    no-repeat;
-  z-index: -1;
-  background-size: 12em;
-  background-position: center;
 }
 
 //Anotation

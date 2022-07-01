@@ -19,7 +19,7 @@
   margin-bottom: 5em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   .image {
-    height: 120px;
+    height: 100px;
     width: auto;
     margin: auto;
     margin-bottom: 2em;
@@ -42,7 +42,7 @@
     font-family: variables.$fontSecondary;
     font-size: 1em;
     letter-spacing: 0.05em;
-    list-style: url("/HezkyBoudy%20-%20web/dev/res/icons/bullet-dark.svg");
+    list-style: url("/res/icons/bullet-dark.svg");
     list-style-position: inside;
     line-height: 1.7em;
   }

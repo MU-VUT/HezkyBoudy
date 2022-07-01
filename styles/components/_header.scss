@@ -9,8 +9,7 @@
 /*Background Image */
 .hero:before {
   content: "";
-  background: url("/HezkyBoudy%20-%20web/dev/res/img/hero-frame.jpg") no-repeat
-    center center/cover;
+  background: url("/res/img/header.jpg") no-repeat center center/cover;
   position: absolute;
   width: 100%;
   height: calc(100vh - 90px);

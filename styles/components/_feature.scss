@@ -24,7 +24,13 @@
     font-size: 1.2em;
     margin: 1em 3em 1em 0;
     font-family: variables.$fontSecondary;
-
+    ul {
+      font-family: variables.$fontSecondary;
+      font-size: 1em;
+      letter-spacing: 0.05em;
+      list-style: url("/res/icons/bullet-dark.svg");
+      list-style-position: inside;
+    }
     p {
       margin: 0.75em 0;
     }
@@ -38,7 +44,7 @@
     position: relative;
     width: 540px;
     height: auto;
-    background-image: url("file:///C:/Users/Red%20Devil/Desktop/WEBY/HezkyBoudy%20-%20weby/dev/res/img/hero-frame.jpg");
+    background-image: url("/res/img/offer.jpg");
     background-size: cover;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
@@ -49,7 +55,7 @@
       left: -30px;
       width: 60px;
       height: 75px;
-      background: url("file:///C:/Users/Red%20Devil/Desktop/WEBY/HezkyBoudy%20-%20weby/dev/res/icons/bullet-dark.svg");
+      background: url("/res/icons/bullet-dark.svg");
       background-size: 100%;
       background-repeat: no-repeat;
       z-index: -10;
@@ -61,7 +67,7 @@
       right: -30px;
       width: 60px;
       height: 75px;
-      background: url("file:///C:/Users/Red%20Devil/Desktop/WEBY/HezkyBoudy%20-%20weby/dev/res/icons/bullet-dark.svg");
+      background: url("/res/icons/bullet-dark.svg");
       background-size: 100%;
       background-repeat: no-repeat;
       z-index: -10;

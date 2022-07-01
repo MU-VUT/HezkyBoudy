@@ -1,5 +1,22 @@
 @use "variables";
 
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.con-col {
+  flex: 1;
+  min-width: 360px;
+  border-bottom: 1px solid variables.$primaryColor;
+  border-left: 1px solid variables.$primaryColor;
+  margin-left: -1px;
+  &:last-of-type {
+    border-right: 1px solid variables.$primaryColor;
+    margin-right: -1px;
+  }
+}
+
 .contact-box {
   width: 90%;
   height: auto;
@@ -28,7 +45,7 @@
     font-family: variables.$fontSecondary;
     font-size: 1em;
     letter-spacing: 0.05em;
-    list-style: url("/HezkyBoudy%20-%20web/dev/res/icons/bullet-dark.svg");
+    list-style: url("/res/icons/bullet-dark.svg");
     list-style-position: inside;
   }
   li {

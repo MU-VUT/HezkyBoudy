@@ -96,7 +96,7 @@ nav li a:active, nav li a:hover {
 /*Background Image */
 .hero:before {
   content: "";
-  background: url("/HezkyBoudy%20-%20web/dev/res/img/hero-frame.jpg") no-repeat center center/cover;
+  background: url("/res/img/header.jpg") no-repeat center center/cover;
   position: absolute;
   width: 100%;
   height: calc(100vh - 90px);
@@ -246,16 +246,6 @@ nav li a:active, nav li a:hover {
     flex: 0 0 100%;
   }
 }
-.col-border {
-  border-bottom: 1px solid rgb(139, 98, 32);
-  border-left: 1px solid rgb(139, 98, 32);
-  margin-left: -1px;
-}
-.col-border:last-of-type {
-  border-right: 1px solid rgb(139, 98, 32);
-  margin-right: -1px;
-}
-
 .hero-box {
   width: 22.5em;
   height: auto;
@@ -263,6 +253,12 @@ nav li a:active, nav li a:hover {
   padding: 2.5em;
   border: 1px solid rgb(139, 98, 32);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.hero-box-animated {
+  transition: 500ms;
+}
+.hero-box-animated:hover {
+  transform: scale(1.01);
 }
 .hero-box .header {
   font-family: "Archivo Narrow", sans-serif;
@@ -363,6 +359,10 @@ nav li a:active, nav li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: 500ms;
+}
+.ref-box:hover {
+  transform: scale(1.01);
 }
 .ref-box .header {
   font-family: "Archivo Narrow", sans-serif;
@@ -373,7 +373,9 @@ nav li a:active, nav li a:hover {
 }
 .ref-box img {
   width: 100%;
-  max-height: 120px;
+  max-height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .ref-box h1 {
   font-size: 2em;
@@ -465,7 +467,7 @@ nav li a:active, nav li a:hover {
 }
 .cta-holder::before {
   content: "";
-  background: url("/HezkyBoudy%20-%20web/dev/res/img/hero-frame.jpg") no-repeat center center/cover;
+  background: url("/res/img/cta-real.png") no-repeat center center/cover;
   position: absolute;
   width: 100%;
   height: 480px;
@@ -489,8 +491,18 @@ nav li a:active, nav li a:hover {
   letter-spacing: 0.05em;
   padding-bottom: 1em;
 }
+
 .cta-contact {
   position: relative;
+  background-color: rgba(0, 0, 0, 0);
+}
+.cta-contact::before {
+  content: "";
+  background: url("/res/img/cta-contact.jpg") no-repeat center center/cover;
+  position: absolute;
+  width: 100%;
+  height: 480px;
+  z-index: -1;
 }
 .cta-contact .text {
   position: absolute;
@@ -541,7 +553,7 @@ nav li a:active, nav li a:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .highlights-box .image {
-  height: 120px;
+  height: 100px;
   width: auto;
   margin: auto;
   margin-bottom: 2em;
@@ -564,7 +576,7 @@ nav li a:active, nav li a:hover {
   font-family: "Nunito", sans-serif;
   font-size: 1em;
   letter-spacing: 0.05em;
-  list-style: url("/HezkyBoudy%20-%20web/dev/res/icons/bullet-dark.svg");
+  list-style: url("/res/icons/bullet-dark.svg");
   list-style-position: inside;
   line-height: 1.7em;
 }
@@ -603,7 +615,7 @@ nav li a:active, nav li a:hover {
 /*Background Image */
 .hero-pattern:before {
   content: "";
-  background: url("/HezkyBoudy%20-%20web/dev/res/icons/pattern.svg") repeat;
+  background: url("/res/img/hero-pattern.jpg") no-repeat center center/cover;
   position: absolute;
   width: 100%;
   height: 15em;
@@ -690,6 +702,23 @@ nav li a:active, nav li a:hover {
   height: 310px;
 }
 
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.con-col {
+  flex: 1;
+  min-width: 360px;
+  border-bottom: 1px solid rgb(139, 98, 32);
+  border-left: 1px solid rgb(139, 98, 32);
+  margin-left: -1px;
+}
+.con-col:last-of-type {
+  border-right: 1px solid rgb(139, 98, 32);
+  margin-right: -1px;
+}
+
 .contact-box {
   width: 90%;
   height: auto;
@@ -718,7 +747,7 @@ nav li a:active, nav li a:hover {
   font-family: "Nunito", sans-serif;
   font-size: 1em;
   letter-spacing: 0.05em;
-  list-style: url("/HezkyBoudy%20-%20web/dev/res/icons/bullet-dark.svg");
+  list-style: url("/res/icons/bullet-dark.svg");
   list-style-position: inside;
 }
 .contact-box li {
@@ -789,6 +818,13 @@ label {
   margin: 1em 3em 1em 0;
   font-family: "Nunito", sans-serif;
 }
+.feature-text ul {
+  font-family: "Nunito", sans-serif;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  list-style: url("/res/icons/bullet-dark.svg");
+  list-style-position: inside;
+}
 .feature-text p {
   margin: 0.75em 0;
 }
@@ -800,7 +836,7 @@ label {
   position: relative;
   width: 540px;
   height: auto;
-  background-image: url("file:///C:/Users/Red%20Devil/Desktop/WEBY/HezkyBoudy%20-%20weby/dev/res/img/hero-frame.jpg");
+  background-image: url("/res/img/offer.jpg");
   background-size: cover;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -811,7 +847,7 @@ label {
   left: -30px;
   width: 60px;
   height: 75px;
-  background: url("file:///C:/Users/Red%20Devil/Desktop/WEBY/HezkyBoudy%20-%20weby/dev/res/icons/bullet-dark.svg");
+  background: url("/res/icons/bullet-dark.svg");
   background-size: 100%;
   background-repeat: no-repeat;
   z-index: -10;
@@ -823,12 +859,44 @@ label {
   right: -30px;
   width: 60px;
   height: 75px;
-  background: url("file:///C:/Users/Red%20Devil/Desktop/WEBY/HezkyBoudy%20-%20weby/dev/res/icons/bullet-dark.svg");
+  background: url("/res/icons/bullet-dark.svg");
   background-size: 100%;
   background-repeat: no-repeat;
   z-index: -10;
 }
 
+#two-boxes {
+  position: relative;
+}
+
+.symbol-vertical {
+  position: absolute;
+  width: 300px;
+  top: 150px;
+  left: calc(50% - 150px);
+  height: 300px;
+  content: "";
+  background: url("/res/icons/filler-full.svg") no-repeat center center/cover;
+  background-size: 12em;
+  -webkit-animation: rotate 1s linear infinite;
+          animation: rotate 1s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: calc(var(--scroll) * -1s);
+          animation-delay: calc(var(--scroll) * -1s);
+}
+
+@-webkit-keyframes rotate {
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(180deg);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -875,14 +943,6 @@ body {
 
 .no-border {
   border: 0;
-}
-
-.symbol-vertical {
-  content: "";
-  background: url("/HezkyBoudy%20-%20web/dev/res/icons/filler-full.svg") no-repeat;
-  z-index: -1;
-  background-size: 12em;
-  background-position: center;
 }
 
 .anotation {

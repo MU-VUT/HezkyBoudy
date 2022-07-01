@@ -1,0 +1,25 @@
+@use "variables";
+#two-boxes {
+  position: relative;
+}
+
+// Filler
+.symbol-vertical {
+  position: absolute;
+  width: 300px;
+  top: 150px;
+  left: calc(50% - 150px);
+  height: 300px;
+  content: "";
+  background: url("/res/icons/filler-full.svg") no-repeat center center/cover;
+  background-size: 12em;
+  animation: rotate 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(180deg);
+  }
+}

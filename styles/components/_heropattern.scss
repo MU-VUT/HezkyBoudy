@@ -9,7 +9,7 @@
 /*Background Image */
 .hero-pattern:before {
   content: "";
-  background: url("/HezkyBoudy%20-%20web/dev/res/icons/pattern.svg") repeat;
+  background: url("/res/img/hero-pattern.jpg") no-repeat center center/cover;
   position: absolute;
   width: 100%;
   height: 15em;

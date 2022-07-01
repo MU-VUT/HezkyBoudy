@@ -13,14 +13,4 @@
   }
 }
 
-.col-border {
-  border-bottom: 1px solid variables.$primaryColor;
-  border-left: 1px solid variables.$primaryColor;
-  margin-left: -1px;
-  &:last-of-type {
-    border-right: 1px solid variables.$primaryColor;
-    margin-right: -1px;
-  }
-}
-
 //&:not(:first-of-type)

@@ -8,8 +8,7 @@ $ctaHeight: 480px;
   background-color: rgba(0, 0, 0, 0.4);
   &::before {
     content: "";
-    background: url("/HezkyBoudy%20-%20web/dev/res/img/hero-frame.jpg")
-      no-repeat center center/cover;
+    background: url("/res/img/cta-real.png") no-repeat center center/cover;
     position: absolute;
     width: 100%;
     height: $ctaHeight;
@@ -33,12 +32,20 @@ $ctaHeight: 480px;
     letter-spacing: 0.05em;
     padding-bottom: 1em;
   }
-  .cta-button {
-  }
 }
 
 .cta-contact {
   position: relative;
+  background-color: rgba(0, 0, 0, 0);
+
+  &::before {
+    content: "";
+    background: url("/res/img/cta-contact.jpg") no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: $ctaHeight;
+    z-index: -1;
+  }
   .text {
     position: absolute;
     bottom: calc($ctaHeight * 0.175);

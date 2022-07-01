@@ -7,6 +7,12 @@
   padding: 2.5em;
   border: 1px solid variables.$primaryColor;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  &-animated {
+    transition: 500ms;
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
 
   .header {
     font-family: variables.$fontPrimary;
