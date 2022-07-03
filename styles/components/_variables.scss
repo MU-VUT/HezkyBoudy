@@ -29,6 +29,15 @@ $breakpoints: (
   }
 }
 
+@mixin mqmax($key) {
+  $size: map.get($breakpoints, $key);
+
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+//Gallery font
 .pswp__counter {
   font-family: $fontSecondary;
 }

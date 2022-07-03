@@ -3,28 +3,78 @@
 var navigationHTML = document.createElement("nav");
 navigationHTML.innerHTML = `
 <span class="logo">
-    <a href=""><img class="logo-icon" src="./res/icons/logo-dark-text.svg" alt="FaceBook"></a>
-    <h1 class="hidden">Hezký Boudy</h1>
-</span>
-<ul>
-    <li><a href="index.html">Domů</a></li>
-    <li><a href="about.html">O nás</a></li>
-    <li><a href="nabidka.html">Nabídka</a></li>
-    <li><a href="realizace.html">Realizace</a></li>
-    <li><a href="kontakt.html">Kontakt</a></li>
-</ul>
-<div class="nav-links">
-    <span>
-        <a target="_blank" href="https://www.facebook.com/hezkyboudy"><img class="nav-icon" src="./res/icons/facebook-square-brands.svg" alt="FaceBook"></a>
-    </span>
-    <span>
-        <a href=""><img class="nav-icon" src="./res/icons/instagram-brands.svg" alt="Instagram"></a>
-    </span>
-    <span>
-        <a href=""><img class="nav-icon" src="./res/icons/linkedin-brands.svg" alt="LinkedIn"></a>
-    </span>
-</div>`;
+            <a href="index.html"><img class="logo-icon" src="./res/icons/logo-dark-text.svg" alt="FaceBook"></a>
+            <h1 class="hidden">Hezký Boudy</h1>
+        </span>
+        <a class="navbar-icon-a" onclick="responsiveNavbar()">
+            <img class="navbar-icon" src="/res/icons/bars-solid.svg" alt="">
+        </a>
+        <ul id="navList" class="nav-list">
+            <li><a href="index.html">Domů</a></li>
+            <li><a href="about.html">O nás</a></li>
+            <li><a href="nabidka.html">Nabídka</a></li>
+            <li><a href="realizace.html">Realizace</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+        <div id="navLinks" class="nav-links">
+            <span>
+                <a target="_blank" href="https://www.facebook.com/hezkyboudy"><img class="nav-icon"
+                        src="./res/icons/facebook-square-brands.svg" alt="FaceBook"></a>
+            </span>
+            <!-- <span>
+                <a href=""><img class="nav-icon" src="./res/icons/instagram-brands.svg" alt="Instagram"></a>
+            </span> -->
+            <span>
+                <a target="_blank"
+                    href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fjakub-hor%25C3%25A1k-237b101a0%2F%3Ffbclid%3DIwAR13V0cC-1VMLkbqNVqZaqyZ3rxCuvHxpNY9oU5ccpSB7FJ9CW-nDXcE26w&h=AT2HdQWn6MIVuWgdjdS_RTt7CFO_0sQY3X1gqtLjFDVgrASwDUrHfUyTwbry7g0JNOnx88xg8NAkJOsmU8KE6chiDfApodq6q_3AgmIwpj-7XZ8HnZ3OBqURyl64iZzUILz-GA"><img
+                        class="nav-icon" src="./res/icons/linkedin-brands.svg" alt="LinkedIn"></a>
+            </span>
+        </div>
+ `;
 document.getElementsByTagName("body")[0].prepend(navigationHTML);
+
+//responsive navbar
+function responsiveNavbar() {
+  var x = document.getElementById("navList");
+  if (x.className === "nav-list") {
+    if (x.classList.contains("animate-out")) {
+      x.classList.remove("animate-out");
+      x.classList.add("animate-in");
+    } else {
+      x.classList.add("animate-out");
+      x.classList.remove("animate-in");
+    }
+    x.className += " responsive-navList";
+  } else {
+    if (x.classList.contains("animate-out")) {
+      x.classList.remove("animate-out");
+      x.classList.add("animate-in");
+    } else {
+      x.classList.add("animate-out");
+      x.classList.remove("animate-in");
+    }
+  }
+
+  var y = document.getElementById("navLinks");
+  if (y.className === "nav-links") {
+    if (y.classList.contains("animate-out")) {
+      y.classList.remove("animate-out");
+      y.classList.add("animate-in");
+    } else {
+      y.classList.add("animate-out");
+      y.classList.remove("animate-in");
+    }
+    y.className += " responsive-navLinks";
+  } else {
+    if (y.classList.contains("animate-out")) {
+      y.classList.remove("animate-out");
+      y.classList.add("animate-in");
+    } else {
+      y.classList.add("animate-out");
+      y.classList.remove("animate-in");
+    }
+  }
+}
 
 //Footer constructor
 var footerHTML = document.createElement("footer");

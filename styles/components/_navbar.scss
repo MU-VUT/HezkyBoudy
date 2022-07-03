@@ -1,20 +1,53 @@
-@use "variables";
+@use "variables" as *;
 
 nav {
-  border-bottom: 1px solid rgba(variables.$primaryColor, 0.5);
+  border-bottom: 1px solid rgba($primaryColor, 0.5);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: variables.$backColor;
-  font-family: variables.$fontPrimary;
+  background-color: $backColor;
+  font-family: $fontPrimary;
   height: 90px;
+  z-index: 5;
+
+  .navbar-icon-a {
+    appearance: button;
+    transition: 0.3s;
+    border-radius: 5px;
+    height: 3em;
+    width: 3em;
+    margin: calc(90px / 4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:active,
+    &:hover {
+      background-color: rgba($primaryColor, 0.9);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      color: $backColor;
+    }
+
+    @include mq(large) {
+      display: none;
+    }
+  }
+
+  .navbar-icon {
+    height: 2.5em;
+    width: auto;
+  }
 
   .logo {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-left: 2em;
-    color: variables.$primaryColorDark;
+    color: $primaryColorDark;
+
+    @include mqmax(medium) {
+      margin-left: 0.5em;
+    }
 
     .logo-icon {
       height: 5em;
@@ -28,6 +61,10 @@ nav {
     align-items: center;
     margin: 1em 0;
     margin-right: 2em;
+
+    @include mqmax(large) {
+      display: none;
+    }
 
     .nav-icon {
       display: block;
@@ -53,16 +90,20 @@ nav {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    @include mqmax(large) {
+      display: none;
+    }
   }
 
   li {
     a {
-      background-color: variables.$backColor;
+      background-color: $backColor;
       appearance: button;
       font-size: 1.5em;
       letter-spacing: 0.1em;
       font-weight: 300;
-      color: variables.$primaryColorDark;
+      color: $primaryColorDark;
       margin: 0.1em 0.8em;
       padding: 0.1em 0.8em;
       text-align: center;
@@ -75,11 +116,72 @@ nav {
 
       &:active,
       &:hover {
-        background-color: rgba(variables.$primaryColor, 0.9);
+        background-color: rgba($primaryColor, 0.9);
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
         // color: white;
       }
+    }
+  }
+
+  .responsive-navList {
+    display: block;
+    float: none;
+    text-align: left;
+    position: absolute;
+    width: 100vw;
+    padding: 0.5em 0;
+    background-color: $backColor;
+    top: 90px;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+
+    li {
+      margin-left: -0.5em;
+      a {
+        border: 2px solid rgba($primaryColor, 0.9);
+      }
+    }
+  }
+
+  .responsive-navLinks {
+    display: flex;
+    flex-direction: row;
+    float: none;
+    text-align: right;
+    position: absolute;
+    top: 90px;
+    right: 0px;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+  }
+
+  .animate-in {
+    animation-name: animate-in;
+  }
+  .animate-out {
+    animation-name: animate-out;
+  }
+
+  @keyframes animate-in {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(-100vw);
+    }
+  }
+
+  @keyframes animate-out {
+    0% {
+      transform: translateX(-100vw);
+    }
+    100% {
+      transform: translateX(0px);
     }
   }
 }

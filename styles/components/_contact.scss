@@ -8,9 +8,9 @@
 .con-col {
   flex: 1;
   min-width: 360px;
-  border-bottom: 1px solid variables.$primaryColor;
-  border-left: 1px solid variables.$primaryColor;
+  border: 1px solid variables.$primaryColor;
   margin-left: -1px;
+  margin-top: 3em;
   &:last-of-type {
     border-right: 1px solid variables.$primaryColor;
     margin-right: -1px;
