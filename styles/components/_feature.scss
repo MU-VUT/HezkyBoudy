@@ -1,18 +1,25 @@
-@use "variables";
+@use "variables" as *;
 
 .feature {
   width: 90%;
   height: auto;
   margin: 0 auto;
-  padding: 5em;
+  padding: 5em 1em;
   max-width: 1920px;
   display: flex;
-  font-family: variables.$fontPrimary;
+  flex-wrap: wrap;
+  font-family: $fontPrimary;
   justify-content: space-between;
+
+  @include mqmax(medium) {
+    padding: 1em 0;
+  }
 
   &-inner {
     display: block;
-    max-width: 50%;
+    @include mq(large) {
+      max-width: 50%;
+    }
   }
 
   h1 {
@@ -23,9 +30,14 @@
   &-text {
     font-size: 1.2em;
     margin: 1em 3em 1em 0;
-    font-family: variables.$fontSecondary;
+
+    @include mqmax(medium) {
+      margin: 0;
+    }
+
+    font-family: $fontSecondary;
     ul {
-      font-family: variables.$fontSecondary;
+      font-family: $fontSecondary;
       font-size: 1em;
       letter-spacing: 0.05em;
       list-style: url("/res/icons/bullet-dark.svg");
@@ -38,39 +50,40 @@
   &-button {
     margin-top: 3em;
   }
+  @include mq(large) {
+    &-image {
+      border-radius: 0.25em;
+      position: relative;
+      width: 540px;
+      height: auto;
+      background-image: url("/res/img/offer.jpg");
+      background-size: cover;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
-  &-image {
-    border-radius: 0.25em;
-    position: relative;
-    width: 540px;
-    height: auto;
-    background-image: url("/res/img/offer.jpg");
-    background-size: cover;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: -30px;
-      left: -30px;
-      width: 60px;
-      height: 75px;
-      background: url("/res/icons/bullet-dark.svg");
-      background-size: 100%;
-      background-repeat: no-repeat;
-      z-index: -10;
-    }
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: -35px;
-      right: -30px;
-      width: 60px;
-      height: 75px;
-      background: url("/res/icons/bullet-dark.svg");
-      background-size: 100%;
-      background-repeat: no-repeat;
-      z-index: -10;
+      &::after {
+        content: "";
+        position: absolute;
+        top: -30px;
+        left: -30px;
+        width: 60px;
+        height: 75px;
+        background: url("/res/icons/bullet-dark.svg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        z-index: -10;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -35px;
+        right: -30px;
+        width: 60px;
+        height: 75px;
+        background: url("/res/icons/bullet-dark.svg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        z-index: -10;
+      }
     }
   }
 }

@@ -1,23 +1,30 @@
-@use "variables";
+@use "variables" as *;
 
 .highlights-heading {
-  font-family: variables.$fontPrimary;
+  font-family: $fontPrimary;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.75em;
-  border-top: 1px solid rgba(variables.$primaryColor, 0.5);
+  border-top: 1px solid rgba($primaryColor, 0.5);
   padding-top: 3em;
   letter-spacing: 0.05em;
 }
 
 .highlights-box {
-  border: 1px solid variables.$primaryColor;
+  border: 1px solid $primaryColor;
   width: 25em;
   height: auto;
   padding: 2.5em;
   margin-top: 2em;
   margin-bottom: 5em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  @include mqmax(small) {
+    width: 100%;
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
+
   .image {
     height: 100px;
     width: auto;
@@ -33,13 +40,13 @@
     padding: 0 1em;
   }
   h2 {
-    font-family: variables.$fontPrimary;
+    font-family: $fontPrimary;
     text-transform: uppercase;
     font-size: 1.75em;
     letter-spacing: 0.05em;
   }
   ul {
-    font-family: variables.$fontSecondary;
+    font-family: $fontSecondary;
     font-size: 1em;
     letter-spacing: 0.05em;
     list-style: url("/res/icons/bullet-dark.svg");
@@ -58,7 +65,7 @@
   width: unset;
   p {
     margin-top: 2em;
-    font-family: variables.$fontSecondary;
+    font-family: $fontSecondary;
     font-size: 1.2em;
     line-height: 1.5em;
     text-align: justify;

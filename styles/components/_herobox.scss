@@ -1,11 +1,11 @@
-@use "variables";
+@use "variables" as *;
 
 .hero-box {
   width: 22.5em;
   height: auto;
   margin: 2.5em 0;
   padding: 2.5em;
-  border: 1px solid variables.$primaryColor;
+  border: 1px solid $primaryColor;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: white;
   &-animated {
@@ -15,8 +15,12 @@
     }
   }
 
+  @include mqmax(small) {
+    width: 100%;
+  }
+
   .header {
-    font-family: variables.$fontPrimary;
+    font-family: $fontPrimary;
     display: flex;
     justify-content: space-between;
     text-align: right;
@@ -40,7 +44,7 @@
   .hero-box-text {
     margin-top: 1.5em;
     text-align: justify;
-    font-family: variables.$fontSecondary;
+    font-family: $fontSecondary;
     .btn {
       margin-top: 1em;
     }
@@ -54,8 +58,24 @@
   padding: 5em;
   max-width: 1920px;
   display: flex;
+
+  @include mqmax(medium) {
+    flex-direction: column;
+  }
+
+  @include mqmax(small) {
+    flex-direction: column;
+    padding: 0.2em;
+    width: 90%;
+    margin: 2em auto;
+  }
+
   .hero-box-image {
     width: 100%;
+
+    @include mqmax(small) {
+      width: fit-content;
+    }
   }
   img {
     width: 100%;
@@ -67,6 +87,10 @@
     h2 {
       font-size: 1.4em;
     }
+
+    @include mqmax(small) {
+      margin: 0 0.2em;
+    }
   }
   .hero-box-heading {
     text-align: left;
@@ -76,6 +100,9 @@
     p {
       margin: 0.5em 0;
       font-size: 1.2em;
+    }
+    @include mqmax(small) {
+      margin: 0 0.2em;
     }
   }
 }

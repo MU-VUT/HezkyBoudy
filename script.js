@@ -76,6 +76,24 @@ function responsiveNavbar() {
   }
 }
 
+//Contact CTA constructor
+var ctaHTML = document.createElement("div");
+ctaHTML.innerHTML = `
+<div class="text">
+                    <h2>Kontaktujte nás</h2>
+                    <p class="cta-subtitle">Zaujalo Vás co děláme? Domluvme si schůzku a vše detailně probereme.</p>
+                </div>
+                <p>
+                    <span class="cta-button">
+                        <a class="btn" href="kontakt.html">Více info</a>
+                    </span>
+                </p>
+`;
+ctaHTML.className = "cta-holder cta-contact";
+if (document.getElementById("CTA-contact") != null) {
+  document.getElementById("CTA-contact").appendChild(ctaHTML);
+}
+
 //Footer constructor
 var footerHTML = document.createElement("footer");
 footerHTML.innerHTML =
@@ -83,23 +101,47 @@ footerHTML.innerHTML =
 document.getElementsByTagName("body")[0].appendChild(footerHTML);
 
 //Get dimensions from gallery
-for (let i = 0; i < 10; i++) {
-  let img = document.createElement("img");
-  img.onload = function (event) {
-    console.log("Image: r1" + i);
-    console.log("width,height:", img.width, img.height);
-  };
-  img.src = "/res/img/real4/r1" + i + ".JPG";
+function galleryDim() {
+  for (let i = 0; i < 10; i++) {
+    let img = document.createElement("img");
+    img.onload = function (event) {
+      console.log("Image: r1" + i);
+      console.log("width,height:", img.width, img.height);
+    };
+    img.src = "/res/img/real4/r1" + i + ".JPG";
+  }
+}
+
+// galleryDim();
+
+//Open gallery intro
+function galleryOpen() {
+  var x = document.getElementById("galleryBoxIntro");
+  if (x.classList.contains("gallery-box-intro-open")) {
+    x.classList.remove("gallery-box-intro-open");
+    x.classList.add("gallery-box-intro-closed");
+  } else {
+    x.classList.remove("gallery-box-intro-closed");
+    x.classList.add("gallery-box-intro-open");
+  }
+  var y = document.getElementsByClassName("gallery-grid")[0];
+  if (y.classList.contains("gallery-grid-closed")) {
+    y.classList.remove("gallery-grid-closed");
+  } else {
+    y.classList.add("gallery-grid-closed");
+  }
 }
 
 //landing page rotate svg on scroll
-window.addEventListener(
-  "scroll",
-  () => {
-    document.body.style.setProperty(
-      "--scroll",
-      window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
-    );
-  },
-  false
-);
+if (document.getElementById("two-boxes") != null) {
+  window.addEventListener(
+    "scroll",
+    () => {
+      document.body.style.setProperty(
+        "--scroll",
+        window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+      );
+    },
+    false
+  );
+}

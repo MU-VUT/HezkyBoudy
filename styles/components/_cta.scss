@@ -1,4 +1,4 @@
-@use "variables";
+@use "variables" as *;
 
 $ctaHeight: 480px;
 
@@ -18,17 +18,21 @@ $ctaHeight: 480px;
     text-align: center;
     font-size: 3em;
     letter-spacing: 0.1em;
-    font-family: variables.$fontPrimary;
+    font-family: $fontPrimary;
     font-weight: 600;
-    color: variables.$backColor;
+    color: $backColor;
     text-transform: uppercase;
     padding-top: calc($ctaHeight * 0.3);
+
+    @include mqmax(small) {
+      font-size: 2em;
+    }
   }
   .cta-subtitle {
     text-align: center;
     font-size: 1.5em;
-    font-family: variables.$fontPrimary;
-    color: variables.$backColor;
+    font-family: $fontPrimary;
+    color: $backColor;
     letter-spacing: 0.05em;
     padding-bottom: 1em;
   }
@@ -54,17 +58,21 @@ $ctaHeight: 480px;
   h2 {
     font-size: 3em;
     letter-spacing: 0.1em;
-    font-family: variables.$fontPrimary;
+    font-family: $fontPrimary;
     font-weight: 600;
-    color: variables.$backColor;
+    color: $backColor;
     text-transform: uppercase;
     padding-top: calc($ctaHeight * 0.3);
     text-align: left;
+
+    @include mqmax(small) {
+      font-size: 2em;
+    }
   }
   .cta-subtitle {
     font-size: 1.5em;
-    font-family: variables.$fontPrimary;
-    color: variables.$backColor;
+    font-family: $fontPrimary;
+    color: $backColor;
     letter-spacing: 0.05em;
     padding-bottom: 0;
     text-align: left;
@@ -73,5 +81,11 @@ $ctaHeight: 480px;
     position: absolute;
     right: calc(100vw * 0.1);
     bottom: calc($ctaHeight * 0.175);
+    transform: scale(1.4);
+
+    @include mqmax(large) {
+      bottom: calc($ctaHeight * 0.075);
+      transform: scale(1);
+    }
   }
 }

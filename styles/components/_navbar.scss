@@ -97,6 +97,9 @@ nav {
   }
 
   li {
+    @include mqmax(large) {
+      min-height: 50px;
+    }
     a {
       background-color: $backColor;
       appearance: button;

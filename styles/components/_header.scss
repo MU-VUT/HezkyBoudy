@@ -1,4 +1,4 @@
-@use "variables";
+@use "variables" as *;
 
 /* Hero Image*/
 .hero {
@@ -40,20 +40,29 @@
   overflow: hidden;
   top: 55%;
   margin-left: 5vw;
-  color: variables.$backColor;
+  color: $backColor;
   // text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
   animation: showHide 2s 0.5s ease-in normal 1;
+
+  @include mqmax(small) {
+    top: 35%;
+    margin: 0 2vw;
+    max-width: 100%;
+  }
 
   h1 {
     font-size: 5em;
     letter-spacing: 0.1em;
-    font-family: variables.$fontPrimary;
+    font-family: $fontPrimary;
     font-weight: 800;
+    @include mqmax(small) {
+      line-height: 1.1em;
+    }
   }
 
   p {
     font-size: 2.5em;
-    font-family: variables.$fontPrimary;
+    font-family: $fontPrimary;
   }
 }
 
