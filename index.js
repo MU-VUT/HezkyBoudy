@@ -1,5 +1,12 @@
 import PhotoSwipeLightbox from "/dist/photoswipe-lightbox.esm.js";
 
+const lightbox0 = new PhotoSwipeLightbox({
+  gallery: "#gallery0",
+  children: "a",
+  pswpModule: () => import("/dist/photoswipe.esm.js"),
+});
+lightbox0.init();
+
 const lightbox1 = new PhotoSwipeLightbox({
   gallery: "#gallery1",
   children: "a",

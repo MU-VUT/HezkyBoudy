@@ -81,7 +81,7 @@ var ctaHTML = document.createElement("div");
 ctaHTML.innerHTML = `
 <div class="text">
                     <h2>Kontaktujte nás</h2>
-                    <p class="cta-subtitle">Zaujalo Vás co děláme? Domluvme si schůzku a vše detailně probereme.</p>
+                    <p class="cta-subtitle">Zaujalo Vás co děláme? Domluvte si schůzku a vše detailně probereme.</p>
                 </div>
                 <p>
                     <span class="cta-button">
@@ -102,13 +102,13 @@ document.getElementsByTagName("body")[0].appendChild(footerHTML);
 
 //Get dimensions from gallery
 function galleryDim() {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 19; i++) {
     let img = document.createElement("img");
     img.onload = function (event) {
-      console.log("Image: r1" + i);
+      console.log("Image: r" + i);
       console.log("width,height:", img.width, img.height);
     };
-    img.src = "/res/img/real4/r1" + i + ".JPG";
+    img.src = "/res/img/real0/r" + i + ".JPG";
   }
 }
 
