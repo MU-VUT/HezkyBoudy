@@ -1,365 +1,220 @@
 <!DOCTYPE html>
 <html lang="cs">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hezký boudy</title>
-    <link rel="icon" type="image/x-icon" href="/res/icons/logo-dark.svg" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <script type="module" src="index.js"></script>
-    <link rel="stylesheet" href="./styles/photoswipe.css" />
-  </head>
 
-  <body>
-    <main>
-      <header class="hero-pattern">
-        <div class="hero-pattern-inner">
-          <div class="hero-pattern-text">
-            <h1>Realizace</h1>
-            <hr class="hr-small" />
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hezký boudy</title>
+  <link rel="icon" type="image/x-icon" href="/res/icons/logo-dark.svg" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <script type="module" src="index.js"></script>
+  <link rel="stylesheet" href="./styles/photoswipe.css" />
+</head>
+
+<body>
+  <main>
+    <header class="hero-pattern">
+      <div class="hero-pattern-inner">
+        <div class="hero-pattern-text">
+          <h1>Realizace</h1>
+          <hr class="hr-small" />
         </div>
-      </header>
-      <!-- TO-DO -->
-      <!-- zmenšit obrázek na 1, po kliku rozjetí do této podoby, pak teprve galerie -->
-      <!-- optimalizovat obrázky, ať se načítají postupně -->
-      <section id="gallery-styled" class="holder mt5 mb5">
-        <div class="row">
-          <div class="col-6 center">
-            <div class="gallery-box gallery-box-closed" onclick="galleryOpen()">
-              <div id="galleryBoxIntro" class="gallery-box-intro-open">
+      </div>
+    </header>
+    <!-- TO-DO -->
+    <!-- zmenšit obrázek na 1, po kliku rozjetí do této podoby, pak teprve galerie -->
+    <!-- optimalizovat obrázky, ať se načítají postupně -->
+    <section id="gallery-styled" class="holder mt5 mb5">
+      <div class="row">
+        <div class="col-6 center">
+          <div class="gallery-box gallery-box-closed">
+            <div class="text">
+              <h2>Přístavba zahradního domku</h2>
+            </div>
+            <div id="galleryBoxIntro1" class="gallery-box-intro-open">
+              <img src="/res/img/real1/r11.JPG" alt="" />
+            </div>
+            <div class="pswp-gallery gallery-grid gallery-grid-closed" id="gallery1">
+              <a href="/res/img/real1/r11.JPG" data-pswp-width="3511" data-pswp-height="2624" target="_blank"
+                class="gallery-grid-first">
                 <img src="/res/img/real1/r11.JPG" alt="" />
-              </div>
-              <div
-                class="pswp-gallery gallery-grid gallery-grid-closed"
-                id="gallery"
-              >
-                <a
-                  href="/res/img/real1/r11.JPG"
-                  data-pswp-width="3511"
-                  data-pswp-height="2624"
-                  target="_blank"
-                  class="gallery-grid-first"
-                >
-                  <img src="/res/img/real1/r11.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real1/r12.JPG"
-                  data-pswp-width="4032"
-                  data-pswp-height="3024"
-                  target="_blank"
-                >
-                  <img src="/res/img/real1/r12.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real1/r13.JPG"
-                  data-pswp-width="3238"
-                  data-pswp-height="2010"
-                  target="_blank"
-                >
-                  <img src="/res/img/real1/r13.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real1/r14.JPG"
-                  data-pswp-width="4032"
-                  data-pswp-height="3024"
-                  target="_blank"
-                  class="gallery-grid-wide"
-                >
-                  <img src="/res/img/real1/r14.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real1/r15.JPG"
-                  data-pswp-width="3552"
-                  data-pswp-height="2160"
-                  target="_blank"
-                  class="gallery-grid-wide"
-                >
-                  <img src="/res/img/real1/r15.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real1/r16.JPG"
-                  data-pswp-width="4032"
-                  data-pswp-height="3024"
-                  target="_blank"
-                >
-                  <img src="/res/img/real1/r16.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real1/r17.JPG"
-                  data-pswp-width="4032"
-                  data-pswp-height="3024"
-                  target="_blank"
-                >
-                  <img src="/res/img/real1/r17.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real1/r18.JPG"
-                  data-pswp-width="4032"
-                  data-pswp-height="3024"
-                  target="_blank"
-                >
-                  <img src="/res/img/real1/r18.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real1/r19.JPG"
-                  data-pswp-width="3565"
-                  data-pswp-height="2830"
-                  target="_blank"
-                >
-                  <img src="/res/img/real1/r19.JPG" alt="" />
-                </a>
-              </div>
-              <div class="text">
-                <h2>Přístavba zahradního domku</h2>
-              </div>
+              </a>
+              <a href="/res/img/real1/r12.JPG" data-pswp-width="4032" data-pswp-height="3024" target="_blank">
+                <img src="/res/img/real1/r12.JPG" alt="" />
+              </a>
+              <a href="/res/img/real1/r13.JPG" data-pswp-width="3238" data-pswp-height="2010" target="_blank">
+                <img src="/res/img/real1/r13.JPG" alt="" />
+              </a>
+              <a href="/res/img/real1/r14.JPG" data-pswp-width="4032" data-pswp-height="3024" target="_blank"
+                class="gallery-grid-wide">
+                <img src="/res/img/real1/r14.JPG" alt="" />
+              </a>
+              <a href="/res/img/real1/r15.JPG" data-pswp-width="3552" data-pswp-height="2160" target="_blank"
+                class="gallery-grid-wide">
+                <img src="/res/img/real1/r15.JPG" alt="" />
+              </a>
+              <a href="/res/img/real1/r16.JPG" data-pswp-width="4032" data-pswp-height="3024" target="_blank">
+                <img src="/res/img/real1/r16.JPG" alt="" />
+              </a>
+              <a href="/res/img/real1/r17.JPG" data-pswp-width="4032" data-pswp-height="3024" target="_blank">
+                <img src="/res/img/real1/r17.JPG" alt="" />
+              </a>
+              <a href="/res/img/real1/r18.JPG" data-pswp-width="4032" data-pswp-height="3024" target="_blank">
+                <img src="/res/img/real1/r18.JPG" alt="" />
+              </a>
+              <a href="/res/img/real1/r19.JPG" data-pswp-width="3565" data-pswp-height="2830" target="_blank">
+                <img src="/res/img/real1/r19.JPG" alt="" />
+              </a>
             </div>
-          </div>
-          <div class="col-6 center">
-            <div class="gallery-box">
-              <div
-                class="pswp-gallery gallery-box-open gallery-grid"
-                id="gallery"
-              >
-                <a
-                  href="/res/img/real2/r11.JPG"
-                  data-pswp-width="2047"
-                  data-pswp-height="1219"
-                  target="_blank"
-                  class="gallery-grid-first"
-                >
-                  <img src="/res/img/real2/r11.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real2/r12.JPG"
-                  data-pswp-width="2048"
-                  data-pswp-height="1536"
-                  target="_blank"
-                >
-                  <img src="/res/img/real2/r12.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real2/r13.JPG"
-                  data-pswp-width="1560"
-                  data-pswp-height="1170"
-                  target="_blank"
-                >
-                  <img src="/res/img/real2/r13.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real2/r14.JPG"
-                  data-pswp-width="1560"
-                  data-pswp-height="1170"
-                  target="_blank"
-                  class="gallery-grid-wide"
-                >
-                  <img src="/res/img/real2/r14.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real2/r15.JPG"
-                  data-pswp-width="1560"
-                  data-pswp-height="1170"
-                  target="_blank"
-                  class="gallery-grid-wide"
-                >
-                  <img src="/res/img/real2/r15.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real2/r16.JPG"
-                  data-pswp-width="1560"
-                  data-pswp-height="1170"
-                  target="_blank"
-                >
-                  <img src="/res/img/real2/r16.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real2/r17.JPG"
-                  data-pswp-width="2000"
-                  data-pswp-height="1500"
-                  target="_blank"
-                >
-                  <img src="/res/img/real2/r17.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real2/r18.JPG"
-                  data-pswp-width="2000"
-                  data-pswp-height="1500"
-                  target="_blank"
-                >
-                  <img src="/res/img/real2/r18.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real2/r19.JPG"
-                  data-pswp-width="2000"
-                  data-pswp-height="1500"
-                  target="_blank"
-                >
-                  <img src="/res/img/real2/r19.JPG" alt="" />
-                </a>
-              </div>
-              <div class="text">
-                <h2>Hrubá stavba RD</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 center center-top">
-            <div class="gallery-box">
-              <div
-                class="pswp-gallery gallery-grid gallery-box-open"
-                id="gallery"
-              >
-                <a
-                  href="/res/img/real3/r11.JPG"
-                  data-pswp-width="4032"
-                  data-pswp-height="3024"
-                  target="_blank"
-                  class="gallery-grid-first"
-                >
-                  <img src="/res/img/real3/r11.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real3/r12.JPG"
-                  data-pswp-width="4032"
-                  data-pswp-height="3024"
-                  target="_blank"
-                >
-                  <img src="/res/img/real3/r12.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real3/r13.JPG"
-                  data-pswp-width="4032"
-                  data-pswp-height="3024"
-                  target="_blank"
-                >
-                  <img src="/res/img/real3/r13.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real3/r14.JPG"
-                  data-pswp-width="4032"
-                  data-pswp-height="3024"
-                  target="_blank"
-                  class="gallery-grid-wide"
-                >
-                  <img src="/res/img/real3/r14.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real3/r15.JPG"
-                  data-pswp-width="4032"
-                  data-pswp-height="3024"
-                  target="_blank"
-                  class="gallery-grid-wide"
-                >
-                  <img src="/res/img/real3/r15.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real3/r16.JPG"
-                  data-pswp-width="4032"
-                  data-pswp-height="3024"
-                  target="_blank"
-                >
-                  <img src="/res/img/real3/r16.JPG" alt="" />
-                </a>
-              </div>
-              <div class="text">
-                <h2>Krabičky na prstýnky</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 center">
-            <div class="gallery-box">
-              <div
-                class="pswp-gallery gallery-grid gallery-box-open"
-                id="gallery"
-              >
-                <a
-                  href="/res/img/real4/r11.JPG"
-                  data-pswp-width="4032"
-                  data-pswp-height="3024"
-                  target="_blank"
-                  class="gallery-grid-first"
-                >
-                  <img src="/res/img/real4/r11.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real4/r12.JPG"
-                  data-pswp-width="3024"
-                  data-pswp-height="4032"
-                  target="_blank"
-                >
-                  <img src="/res/img/real4/r12.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real4/r13.JPG"
-                  data-pswp-width="2048"
-                  data-pswp-height="1150"
-                  target="_blank"
-                >
-                  <img src="/res/img/real4/r13.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real4/r14.JPG"
-                  data-pswp-width="4032"
-                  data-pswp-height="3024"
-                  target="_blank"
-                  class="gallery-grid-wide"
-                >
-                  <img src="/res/img/real4/r14.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real4/r15.JPG"
-                  data-pswp-width="4032"
-                  data-pswp-height="3024"
-                  target="_blank"
-                  class="gallery-grid-wide"
-                >
-                  <img src="/res/img/real4/r15.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real4/r16.JPG"
-                  data-pswp-width="4032"
-                  data-pswp-height="3024"
-                  target="_blank"
-                >
-                  <img src="/res/img/real4/r16.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real4/r17.JPG"
-                  data-pswp-width="4032"
-                  data-pswp-height="3024"
-                  target="_blank"
-                >
-                  <img src="/res/img/real4/r17.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real4/r18.JPG"
-                  data-pswp-width="4032"
-                  data-pswp-height="3024"
-                  target="_blank"
-                >
-                  <img src="/res/img/real4/r18.JPG" alt="" />
-                </a>
-                <a
-                  href="/res/img/real4/r19.JPG"
-                  data-pswp-width="4032"
-                  data-pswp-height="3024"
-                  target="_blank"
-                >
-                  <img src="/res/img/real4/r19.JPG" alt="" />
-                </a>
-              </div>
-              <div class="text">
-                <h2>Další výrobky</h2>
-              </div>
-            </div>
+            <p>
+              <span class="cta-button center">
+                <a id="btnMore" class="btn" onclick="galleryOpen(1)">Zobrazit více</a>
+              </span>
+            </p>
+
           </div>
         </div>
-      </section>
+        <div class="col-6 center">
+          <div class="gallery-box gallery-box-closed">
+            <div class="text">
+              <h2>Hrubá stavba RD</h2>
+            </div>
+            <div id="galleryBoxIntro2" class="gallery-box-intro-open">
+              <img src="/res/img/real2/r11.JPG" alt="" />
+            </div>
+            <div class="pswp-gallery gallery-grid gallery-grid-closed" id="gallery2">
+              <a href="/res/img/real2/r11.JPG" data-pswp-width="2047" data-pswp-height="1219" target="_blank"
+                class="gallery-grid-first">
+                <img src="/res/img/real2/r11.JPG" alt="" />
+              </a>
+              <a href="/res/img/real2/r12.JPG" data-pswp-width="2048" data-pswp-height="1536" target="_blank">
+                <img src="/res/img/real2/r12.JPG" alt="" />
+              </a>
+              <a href="/res/img/real2/r13.JPG" data-pswp-width="1560" data-pswp-height="1170" target="_blank">
+                <img src="/res/img/real2/r13.JPG" alt="" />
+              </a>
+              <a href="/res/img/real2/r14.JPG" data-pswp-width="1560" data-pswp-height="1170" target="_blank"
+                class="gallery-grid-wide">
+                <img src="/res/img/real2/r14.JPG" alt="" />
+              </a>
+              <a href="/res/img/real2/r15.JPG" data-pswp-width="1560" data-pswp-height="1170" target="_blank"
+                class="gallery-grid-wide">
+                <img src="/res/img/real2/r15.JPG" alt="" />
+              </a>
+              <a href="/res/img/real2/r16.JPG" data-pswp-width="1560" data-pswp-height="1170" target="_blank">
+                <img src="/res/img/real2/r16.JPG" alt="" />
+              </a>
+              <a href="/res/img/real2/r17.JPG" data-pswp-width="2000" data-pswp-height="1500" target="_blank">
+                <img src="/res/img/real2/r17.JPG" alt="" />
+              </a>
+              <a href="/res/img/real2/r18.JPG" data-pswp-width="2000" data-pswp-height="1500" target="_blank">
+                <img src="/res/img/real2/r18.JPG" alt="" />
+              </a>
+              <a href="/res/img/real2/r19.JPG" data-pswp-width="2000" data-pswp-height="1500" target="_blank">
+                <img src="/res/img/real2/r19.JPG" alt="" />
+              </a>
+            </div>
+            <p>
+              <span class="cta-button center">
+                <a id="btnMore" class="btn" onclick="galleryOpen(2)">Zobrazit více</a>
+              </span>
+            </p>
+          </div>
+        </div>
+        <div class="col-6 center center-top">
+          <div class="gallery-box gallery-box-closed">
+            <div class="text">
+              <h2>Krabičky na prstýnky</h2>
+            </div>
+            <div id="galleryBoxIntro3" class="gallery-box-intro-open">
+              <img src="/res/img/real3/r11.JPG" alt="" />
+            </div>
+            <div class="pswp-gallery gallery-grid gallery-grid-closed" id="gallery3">
+              <a href="/res/img/real3/r11.JPG" data-pswp-width="4032" data-pswp-height="3024" target="_blank"
+                class="gallery-grid-first">
+                <img src="/res/img/real3/r11.JPG" alt="" />
+              </a>
+              <a href="/res/img/real3/r12.JPG" data-pswp-width="4032" data-pswp-height="3024" target="_blank">
+                <img src="/res/img/real3/r12.JPG" alt="" />
+              </a>
+              <a href="/res/img/real3/r13.JPG" data-pswp-width="4032" data-pswp-height="3024" target="_blank">
+                <img src="/res/img/real3/r13.JPG" alt="" />
+              </a>
+              <a href="/res/img/real3/r14.JPG" data-pswp-width="4032" data-pswp-height="3024" target="_blank"
+                class="gallery-grid-wide">
+                <img src="/res/img/real3/r14.JPG" alt="" />
+              </a>
+              <a href="/res/img/real3/r15.JPG" data-pswp-width="4032" data-pswp-height="3024" target="_blank"
+                class="gallery-grid-wide">
+                <img src="/res/img/real3/r15.JPG" alt="" />
+              </a>
+              <a href="/res/img/real3/r16.JPG" data-pswp-width="4032" data-pswp-height="3024" target="_blank">
+                <img src="/res/img/real3/r16.JPG" alt="" />
+              </a>
+            </div>
+            <p>
+              <span class="cta-button center">
+                <a id="btnMore" class="btn" onclick="galleryOpen(3)">Zobrazit více</a>
+              </span>
+            </p>
+          </div>
+        </div>
+        <div class="col-6 center">
+          <div class="gallery-box gallery-box-closed">
+            <div class="text">
+              <h2>Další výrobky</h2>
+            </div>
+            <div id="galleryBoxIntro4" class="gallery-box-intro-open">
+              <img src="/res/img/real4/r11.JPG" alt="" />
+            </div>
+            <div class="pswp-gallery gallery-grid gallery-grid-closed" id="gallery4">
+              <a href="/res/img/real4/r11.JPG" data-pswp-width="4032" data-pswp-height="3024" target="_blank"
+                class="gallery-grid-first">
+                <img src="/res/img/real4/r11.JPG" alt="" />
+              </a>
+              <a href="/res/img/real4/r12.JPG" data-pswp-width="3024" data-pswp-height="4032" target="_blank">
+                <img src="/res/img/real4/r12.JPG" alt="" />
+              </a>
+              <a href="/res/img/real4/r13.JPG" data-pswp-width="2048" data-pswp-height="1150" target="_blank">
+                <img src="/res/img/real4/r13.JPG" alt="" />
+              </a>
+              <a href="/res/img/real4/r14.JPG" data-pswp-width="4032" data-pswp-height="3024" target="_blank"
+                class="gallery-grid-wide">
+                <img src="/res/img/real4/r14.JPG" alt="" />
+              </a>
+              <a href="/res/img/real4/r15.JPG" data-pswp-width="4032" data-pswp-height="3024" target="_blank"
+                class="gallery-grid-wide">
+                <img src="/res/img/real4/r15.JPG" alt="" />
+              </a>
+              <a href="/res/img/real4/r16.JPG" data-pswp-width="4032" data-pswp-height="3024" target="_blank">
+                <img src="/res/img/real4/r16.JPG" alt="" />
+              </a>
+              <a href="/res/img/real4/r17.JPG" data-pswp-width="4032" data-pswp-height="3024" target="_blank">
+                <img src="/res/img/real4/r17.JPG" alt="" />
+              </a>
+              <a href="/res/img/real4/r18.JPG" data-pswp-width="4032" data-pswp-height="3024" target="_blank">
+                <img src="/res/img/real4/r18.JPG" alt="" />
+              </a>
+              <a href="/res/img/real4/r19.JPG" data-pswp-width="4032" data-pswp-height="3024" target="_blank">
+                <img src="/res/img/real4/r19.JPG" alt="" />
+              </a>
+            </div>
+            <p>
+              <span class="cta-button center">
+                <a id="btnMore" class="btn" onclick="galleryOpen(4)">Zobrazit více</a>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section id="CTA-contact"></section>
-      <!-- <section id="site-map"></section> -->
-    </main>
+    <section id="CTA-contact"></section>
+    <!-- <section id="site-map"></section> -->
+  </main>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>

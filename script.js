@@ -115,8 +115,8 @@ function galleryDim() {
 // galleryDim();
 
 //Open gallery intro
-function galleryOpen() {
-  var x = document.getElementById("galleryBoxIntro");
+function galleryOpen(galleryId) {
+  var x = document.getElementById("galleryBoxIntro" + galleryId);
   if (x.classList.contains("gallery-box-intro-open")) {
     x.classList.remove("gallery-box-intro-open");
     x.classList.add("gallery-box-intro-closed");
@@ -124,11 +124,32 @@ function galleryOpen() {
     x.classList.remove("gallery-box-intro-closed");
     x.classList.add("gallery-box-intro-open");
   }
-  var y = document.getElementsByClassName("gallery-grid")[0];
+  var y = document.getElementById("gallery" + galleryId);
   if (y.classList.contains("gallery-grid-closed")) {
     y.classList.remove("gallery-grid-closed");
+    // galleryLoad();
   } else {
     y.classList.add("gallery-grid-closed");
+  }
+
+  var z = document.getElementById("btnMore");
+  if (x.classList.contains("gallery-box-intro-open")) {
+    z.innerText = "Zobrazit více";
+  } else {
+    z.innerText = "Zobrazit méně";
+  }
+}
+
+//Gallery load
+function galleryLoad() {
+  var galleryHTML = document.getElementById("gallery1");
+  for (let i = 0; i < 19; i++) {
+    galleryHTML.innerHTML +=
+      '<a href="/res/img/real1/r1' +
+      i +
+      '.JPG" data-pswp-width="3511" data-pswp-height="2624" target="_blank"><img src="/res/img/real1/r1' +
+      i +
+      '.JPG"/></a>';
   }
 }
 

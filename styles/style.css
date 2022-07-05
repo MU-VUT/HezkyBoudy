@@ -903,7 +903,6 @@ nav .animate-out {
   text-align: center;
   font-size: 1.75em;
   letter-spacing: 0.05em;
-  margin-top: 1em;
 }
 .gallery-box .gallery-grid {
   display: grid;
@@ -911,6 +910,7 @@ nav .animate-out {
   grid-template-rows: auto;
   gap: 10px;
   z-index: 5;
+  margin: 1em 0;
 }
 .gallery-box .gallery-grid a {
   height: 150px;
@@ -939,6 +939,7 @@ nav .animate-out {
 .gallery-box .gallery-box-intro-open {
   height: 450px;
   display: flex;
+  margin: 1em 0;
 }
 .gallery-box .gallery-box-intro-open img {
   height: 100%;
@@ -955,12 +956,8 @@ nav .animate-out {
   display: none;
 }
 
-.gallery-box-closed {
-  transition: 0.3s;
-}
-.gallery-box-closed:active, .gallery-box-closed:hover {
+#btnMore {
   cursor: pointer;
-  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.6);
 }
 
 .contact-container {
