@@ -14,6 +14,14 @@ footer {
   padding: 0.5em;
   font-family: "Nunito", sans-serif;
 }
+footer a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+footer a:active, footer a:hover {
+  color: rgb(139, 98, 32);
+}
 
 nav {
   border-bottom: 1px solid rgba(139, 98, 32, 0.5);
@@ -342,47 +350,36 @@ nav .animate-out {
   .col-1 {
     flex: 0 0 8.3333333333%;
   }
-
   .col-2 {
     flex: 0 0 16.6666666667%;
   }
-
   .col-3 {
     flex: 0 0 25%;
   }
-
   .col-4 {
     flex: 0 0 33.3333333333%;
   }
-
   .col-5 {
     flex: 0 0 41.6666666667%;
   }
-
   .col-6 {
     flex: 0 0 50%;
   }
-
   .col-7 {
     flex: 0 0 58.3333333333%;
   }
-
   .col-8 {
     flex: 0 0 66.6666666667%;
   }
-
   .col-9 {
     flex: 0 0 75%;
   }
-
   .col-10 {
     flex: 0 0 83.3333333333%;
   }
-
   .col-11 {
     flex: 0 0 91.6666666667%;
   }
-
   .col-12 {
     flex: 0 0 100%;
   }
@@ -1046,22 +1043,14 @@ nav .animate-out {
 input[type=text],
 select,
 textarea {
-  width: 100%;
-  /* Full width */
-  padding: 12px;
-  /* Some padding */
-  border: 1px solid #ccc;
-  /* Gray border */
-  border-radius: 4px;
-  /* Rounded borders */
-  box-sizing: border-box;
-  /* Make sure that padding and width stays in place */
-  margin-top: 6px;
-  /* Add a top margin */
-  margin-bottom: 16px;
-  /* Bottom margin */
-  resize: vertical;
-  /* Allow the user to vertically resize the textarea (not horizontally) */
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
   font-family: "Nunito", sans-serif;
   display: block;
   min-height: 1em;
@@ -1199,6 +1188,54 @@ label {
     transform: rotate(180deg);
   }
 }
+.loader {
+  margin: auto;
+  border: 5px solid #eaf0f6;
+  border-radius: 50%;
+  border-top: 5px solid rgb(75, 53, 17);
+  width: 25px;
+  height: 25px;
+  -webkit-animation: spinner 2s linear infinite;
+          animation: spinner 2s linear infinite;
+  margin-bottom: 5px;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.gdpr-text {
+  width: 100%;
+  max-width: 1080px;
+  margin: 2em;
+}
+.gdpr-text h2 {
+  font-family: "Archivo Narrow", sans-serif;
+}
+.gdpr-text p {
+  font-family: "Nunito", sans-serif;
+}
+.gdpr-text ol {
+  font-family: "Nunito", sans-serif;
+  margin-left: 2em;
+}
+.gdpr-text ol ul {
+  margin-left: 4em;
+}
+
 * {
   margin: 0;
   padding: 0;

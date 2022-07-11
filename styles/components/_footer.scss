@@ -9,4 +9,13 @@ footer {
   color: white;
   padding: 0.5em;
   font-family: variables.$fontSecondary;
+  a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    &:active,
+    &:hover {
+      color: variables.$primaryColor;
+    }
+  }
 }

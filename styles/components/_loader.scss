@@ -1,0 +1,22 @@
+@use "variables" as *;
+
+.loader {
+  margin: auto;
+  border: 5px solid #eaf0f6;
+  border-radius: 50%;
+  border-top: 5px solid $primaryColorDark;
+  width: 25px;
+  height: 25px;
+  animation: spinner 2s linear infinite;
+  margin-bottom: 5px;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

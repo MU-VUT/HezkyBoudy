@@ -97,7 +97,7 @@ if (document.getElementById("CTA-contact") != null) {
 //Footer constructor
 var footerHTML = document.createElement("footer");
 footerHTML.innerHTML =
-  "<span>&copy; Michal Urbánek - Web development & Webdesign</span>";
+  '<span>&copy; Michal Urbánek - Webdevelopment & Webdesign | <a href="gdpr.html">Ochrana osobních údajů</a></span>';
 document.getElementsByTagName("body")[0].appendChild(footerHTML);
 
 //Get dimensions from gallery
@@ -116,6 +116,28 @@ function galleryDim() {
 
 //Open gallery intro
 function galleryOpen(galleryId) {
+  // galleryOpenLoader(galleryId);
+  galleryOpenIntro(galleryId);
+  galleryOpenGrid(galleryId);
+  galleryOpenBtn(galleryId);
+}
+
+//Shows loader animation on button click
+//not working WIP
+function galleryOpenLoader(galleryId) {
+  var loaderHTML = document.createElement("div");
+  loaderHTML.className = "loader";
+  let x = document.getElementById("galleryBtn" + galleryId);
+  let y = document.getElementsByClassName("loader")[0];
+  if (y == null) {
+    x.prepend(loaderHTML);
+  } else {
+    y.remove();
+  }
+}
+
+//Shows/hide galleryBoxIntro image
+function galleryOpenIntro(galleryId) {
   var x = document.getElementById("galleryBoxIntro" + galleryId);
   if (x.classList.contains("gallery-box-intro-open")) {
     x.classList.remove("gallery-box-intro-open");
@@ -124,6 +146,10 @@ function galleryOpen(galleryId) {
     x.classList.remove("gallery-box-intro-closed");
     x.classList.add("gallery-box-intro-open");
   }
+}
+
+//Shows/hide gallery grid
+function galleryOpenGrid(galleryId) {
   var y = document.getElementById("gallery" + galleryId);
   if (y.classList.contains("gallery-grid-closed")) {
     y.classList.remove("gallery-grid-closed");
@@ -131,8 +157,12 @@ function galleryOpen(galleryId) {
   } else {
     y.classList.add("gallery-grid-closed");
   }
+}
 
-  var z = document.getElementById("btnMore");
+//Changes button more/less on gallery unloaded/loaded
+function galleryOpenBtn(galleryId) {
+  var z = document.getElementById("btnMore" + galleryId);
+  let x = document.getElementById("galleryBoxIntro" + galleryId);
   if (x.classList.contains("gallery-box-intro-open")) {
     z.innerText = "Zobrazit více";
   } else {
@@ -141,6 +171,7 @@ function galleryOpen(galleryId) {
 }
 
 //Gallery load
+// WIP
 function galleryLoad() {
   var galleryHTML = document.getElementById("gallery1");
   for (let i = 0; i < 19; i++) {
@@ -166,3 +197,5 @@ if (document.getElementById("two-boxes") != null) {
     false
   );
 }
+
+//Cookie popup

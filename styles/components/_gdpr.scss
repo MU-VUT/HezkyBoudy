@@ -1,0 +1,20 @@
+@use "variables";
+
+.gdpr-text {
+  width: 100%;
+  max-width: 1080px;
+  margin: 2em;
+  h2 {
+    font-family: variables.$fontPrimary;
+  }
+  p {
+    font-family: variables.$fontSecondary;
+  }
+  ol {
+    font-family: variables.$fontSecondary;
+    margin-left: 2em;
+    ul {
+      margin-left: 4em;
+    }
+  }
+}
