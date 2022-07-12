@@ -14,7 +14,7 @@ navigationHTML.innerHTML = `
             <li><a href="about.html">O nás</a></li>
             <li><a href="nabidka.html">Nabídka</a></li>
             <li><a href="realizace.html">Realizace</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="http://127.0.0.1:5500/kontakt.php">Kontakt</a></li>
         </ul>
         <div id="navLinks" class="nav-links">
             <span>
@@ -26,7 +26,7 @@ navigationHTML.innerHTML = `
             </span> -->
             <span>
                 <a target="_blank"
-                    href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fjakub-hor%25C3%25A1k-237b101a0%2F%3Ffbclid%3DIwAR13V0cC-1VMLkbqNVqZaqyZ3rxCuvHxpNY9oU5ccpSB7FJ9CW-nDXcE26w&h=AT2HdQWn6MIVuWgdjdS_RTt7CFO_0sQY3X1gqtLjFDVgrASwDUrHfUyTwbry7g0JNOnx88xg8NAkJOsmU8KE6chiDfApodq6q_3AgmIwpj-7XZ8HnZ3OBqURyl64iZzUILz-GA"><img
+                    href="https://www.linkedin.com/in/jakub-hor%C3%A1k-237b101a0/?fbclid=IwAR13V0cC-1VMLkbqNVqZaqyZ3rxCuvHxpNY9oU5ccpSB7FJ9CW-nDXcE26w"><img
                         class="nav-icon" src="./res/icons/linkedin-brands.svg" alt="LinkedIn"></a>
             </span>
         </div>
@@ -85,7 +85,7 @@ ctaHTML.innerHTML = `
                 </div>
                 <p>
                     <span class="cta-button">
-                        <a class="btn" href="kontakt.html">Více info</a>
+                        <a class="btn" href="kontakt.php">Více info</a>
                     </span>
                 </p>
 `;

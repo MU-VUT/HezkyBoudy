@@ -78,20 +78,23 @@
         <h1>Kontaktujte nás</h1>
         <div class="divider">
           <img src="./res/icons/divider.svg">
+          <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
         </div>
       </div>
       <!-- simple form -->
       <div class="holder holder-sm">
-        <form action="action_page.php">
-          <label for="name">Jméno</label>
+        <form method="POST" action="form.php" id="contact-form">
+          <label for="name" class="required">Jméno</label>
           <input type="text" id="name" name="name" placeholder="Jméno Příjmení">
-          <label for="mail">E-mail</label>
-          <input type="text" id="mail" name="mail" placeholder="jan.novak@email.cz">
-          <label for="subject">Předmět</label>
-          <input type="text" id="subject" name="subject" placeholder="Stavba TinyHouse Brno">
+          <label for="mail" class="required">E-mail</label>
+          <input type="text" id="mail" name="mail" placeholder="jan.novak@email.cz"  required>
+          <label for="subject" class="required">Předmět</label>
+          <input type="text" id="subject" name="subject" placeholder="Stavba TinyHouse Brno"  required>
           <label for="subjectText">Poznámka</label>
           <textarea id="subjectText" name="subjectText" placeholder="Zde můžete popsat konkrétní požadavky.."
             style="height:200px"></textarea>
+            <input type="checkbox" name="agree" id="agree" required>
+            <label for="agree" class="required">Souhlasím se zpracováním <a href="gdpr.html" target="_blank">osobních údajů</a>.</label>
           <input type="submit" class="btn btn-outline" value="Odeslat">
         </form>
       </div>

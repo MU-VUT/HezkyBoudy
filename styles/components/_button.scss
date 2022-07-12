@@ -23,6 +23,7 @@
     background-color: rgba(variables.$primaryColor, 0.9);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     color: variables.$backColor;
+    cursor: pointer;
   }
   &-outline {
     border: 2px solid rgba(variables.$primaryColor, 0.9);
