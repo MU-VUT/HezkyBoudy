@@ -5,7 +5,7 @@ $errorMessage = '';
 
 if (!empty($_POST)) {
     $name = $_POST['name'];
-    $email = $_POST['email'];
+    $email = $_POST['mail'];
     $subject = $_POST['subject'];
     $subjectText = $_POST['subjectText'];
 
@@ -33,13 +33,14 @@ if (!empty($_POST)) {
         $body = join(PHP_EOL, $bodyParagraphs);
 
         if (mail($toEmail, $emailSubject, $body, $headers)) {
-            header('Location: thank-you.html');
+            header('Location: kontakt.php');
         } else {
             $errorMessage = 'Oops, something went wrong. Please try again later';
         }
     } else {
         $allErrors = join('<br/>', $errors);
         $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
+        echo((!empty($errorMessage)) ? $errorMessage : '');
     }
 }
 

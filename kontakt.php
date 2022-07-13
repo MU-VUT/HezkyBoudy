@@ -63,7 +63,7 @@
                 <p>
                 <ul>
                   <li>Žatčany u Brna</li>
-                  <li>Areál tak velký, že se tam už 5 lidí ztratilo</li>
+                  <li>Areál Dipro</li>
                 </ul>
                 </p>
               </div>
@@ -78,14 +78,13 @@
         <h1>Kontaktujte nás</h1>
         <div class="divider">
           <img src="./res/icons/divider.svg">
-          <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
         </div>
       </div>
       <!-- simple form -->
       <div class="holder holder-sm">
         <form method="POST" action="form.php" id="contact-form">
           <label for="name" class="required">Jméno</label>
-          <input type="text" id="name" name="name" placeholder="Jméno Příjmení">
+          <input type="text" id="name" name="name" placeholder="Jméno Příjmení" required>
           <label for="mail" class="required">E-mail</label>
           <input type="text" id="mail" name="mail" placeholder="jan.novak@email.cz"  required>
           <label for="subject" class="required">Předmět</label>

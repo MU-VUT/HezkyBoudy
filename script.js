@@ -14,7 +14,7 @@ navigationHTML.innerHTML = `
             <li><a href="about.html">O nás</a></li>
             <li><a href="nabidka.html">Nabídka</a></li>
             <li><a href="realizace.html">Realizace</a></li>
-            <li><a href="http://127.0.0.1:5500/kontakt.php">Kontakt</a></li>
+            <li><a href="kontakt.php">Kontakt</a></li>
         </ul>
         <div id="navLinks" class="nav-links">
             <span>
