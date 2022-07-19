@@ -6,13 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hezký boudy</title>
+  <meta name="description" content="Hezký boudy | Zakázková výroba dřevostaveb, tinyhousů a zahradních domků ">
+    <meta name="keywords" content="Hezký boudy, HB, tinyhouse, tiny house, bydlení, chaty, lesní školky">
+    <meta name="author" content="Michal Urbánek">
   <link rel="icon" type="image/x-icon" href="/res/icons/logo-dark.svg">
   <link rel="stylesheet" href="./styles/style.css" />
   <link rel="stylesheet" href="/src/cookieconsent.css" media="print" onload="this.media='all'">
-
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script>
+   function onSubmit(token) {
+     document.getElementById("contact-form").submit();
+   }
+ </script>
 </head>
 
 <body>
+
+
   <main>
     <header class="hero-pattern">
       <div class="hero-pattern-inner">
@@ -94,7 +104,7 @@
             style="height:200px"></textarea>
             <input type="checkbox" name="agree" id="agree" required>
             <label for="agree" class="required">Souhlasím se zpracováním <a href="gdpr.html" target="_blank">osobních údajů</a>.</label>
-          <input type="submit" class="btn btn-outline" value="Odeslat">
+          <input type="submit" class="btn btn-outline g-recaptcha" value="Odeslat" data-sitekey="6LfF3QAhAAAAAFu50-HarfxhuJzqW1sb0nQEWC3U" data-callback="onSubmit">
         </form>
       </div>
     </section>

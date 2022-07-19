@@ -41,6 +41,9 @@ $ctaHeight: 480px;
 .cta-contact {
   position: relative;
   background-color: rgba(0, 0, 0, 0);
+  @include mqmax(medium) {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
 
   &::before {
     content: "";

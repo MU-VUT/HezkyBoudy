@@ -697,6 +697,11 @@ nav .animate-out {
   position: relative;
   background-color: rgba(0, 0, 0, 0);
 }
+@media screen and (max-width: 768px) {
+  .cta-contact {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
 .cta-contact::before {
   content: "";
   background: url("/res/img/cta-contact.jpg") no-repeat center center/cover;

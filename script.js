@@ -197,5 +197,3 @@ if (document.getElementById("two-boxes") != null) {
     false
   );
 }
-
-//Cookie popup
