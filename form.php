@@ -10,9 +10,20 @@
     <title>Hezký boudy</title>
     <link rel="icon" type="image/x-icon" href="/res/icons/logo-dark.svg">
     <link rel="stylesheet" href="./styles/style.css">
+    <!-- Google Tag Manager -->
+<script data-cookiecategory="analytics">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TJ54CKH');</script>
+<!-- End Google Tag Manager -->
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJ54CKH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
     <main>
         <section id="form-sent">
         <?php
@@ -45,7 +56,7 @@ if (!empty($_POST)) {
         // $toEmail = 'web.michalurbanek@gmail.com';
         $toEmail = 'info@hezkyboudy.cz';
         $emailSubject = $subject;
-        $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=iso-8859-1'];
+        $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=UTF-8'];
 
         // $bodyParagraphs = ["Name: {$name}", "Email: {$email}", "Message:", $subjectText];
         // $body = join(PHP_EOL, $bodyParagraphs);
@@ -102,9 +113,9 @@ if (!empty($_POST)) {
                 <p><strong>Poznámka:</strong> {$subjectText}</p>
             </div>
             ";
-            $headers2 = ['From' => $toEmail, 'Reply-To' => $toEmail, 'Content-type' => 'text/html; charset=iso-8859-1'];
+            $headers2 = ['From' => $toEmail, 'Reply-To' => $toEmail, 'Content-type' => 'text/html; charset=UTF-8'];
             mail($email, $emailSubject2, $body2, $headers2);
-            echo("<script>setTimeout(function(){window.location.href='kontakt.php';}, 3000);</script>");
+            echo("<script>setTimeout(function(){window.location.href='kontakt.php';}, 5000);</script>");
         } else {
             $errorMessage = 'Oops, něco se nepovedlo. Zopakujte akci později.';
         }
