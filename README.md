@@ -2,6 +2,8 @@
 
 Simple multipage adaptive custom made website for TinyHouses construction company. Only few libraries were used. Mainly focused on customer wishes.
 
+![Hezky Boudy logo](https://hezkyboudy.cz/res/icons/logo-dark-text.svg)
+
 [Link to website](https://hezkyboudy.cz/). Only in czech version.
 
 ## Technologies
